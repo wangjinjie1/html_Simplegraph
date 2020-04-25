@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>饼图</title>
+    <style type="text/css">
+    .pie {
+        /*width: 150px;*/
+        /*height: 150px;*/
+        position: relative;
+        display: inline-block;
+        border-radius: 50%;
+        background: #3c7;
+        border: solid 75px;
+        border-color: #3c7 #3c7 #37c #37c;
+        box-sizing: border-box;
+        transform: rotate(45deg);
+    }
+
+    .pie::after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        border-radius: 50%;
+        position: absolute;
+        border: solid 75px;
+        border-color: #37c #37c transparent transparent;
+        /*占比60%*/
+        transform: translate(-50%, -50%) rotate(0.7turn);
+    }
+
+    .pie.convex::after {
+        border-color: transparent transparent #3c7 #3c7;
+        /*transform: translate(-50%, -50%) rotate(0.3turn);*/
+    }
+    </style>
+</head>
+
+<body>
+    <div class="pie convex"></div>
+</body>
+
+</html>
