@@ -26,19 +26,34 @@
         position: absolute;
         border: solid 75px;
         border-color: #37c #37c transparent transparent;
-        /*占比60%*/
-        transform: translate(-50%, -50%) rotate(0.7turn);
+        /*占比70%*/
+        /*transform: translate(-50%, -50%) rotate(0.7turn);*/
     }
 
     .pie.convex::after {
         border-color: transparent transparent #3c7 #3c7;
         /*transform: translate(-50%, -50%) rotate(0.3turn);*/
     }
+    .pie.one::after{
+    	transform: translate(-50%, -50%) rotate(0.1turn);
+    }
+    .pie.two::after{
+    	transform: translate(-50%, -50%) rotate(0.3turn);
+    }
+    .pie.three::after{
+    	transform: translate(-50%, -50%) rotate(0.5turn);
+    }
+    .pie.four::after{
+    	transform: translate(-50%, -50%) rotate(0.7turn);
+    }
     </style>
 </head>
 
 <body>
-    <div class="pie convex"></div>
+	<div class="pie one"></div>
+	<div class="pie two"></div>
+	<div class="pie three"></div>
+    <div class="pie convex four"></div>
 </body>
 
 </html>
